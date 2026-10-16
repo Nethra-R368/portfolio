@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MalariaLens AI — Deep Learning Erythrocyte Diagnostic System</title>
+  <meta name="description" content="Interactive AI clinical screening platform for automated malaria detection from thin blood smear micrographs. Developed by Group 12 at Amrita Vishwa Vidyapeetham.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- TOP HEADER -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="../" class="back-link" title="Return to Nethra's Portfolio">
+          <i data-lucide="arrow-left"></i>
+          <span>Portfolio</span>
+        </a>
+        <div class="app-brand">
+          <div class="brand-symbol"><i data-lucide="microscope"></i></div>
+          <div>
+            <h1 class="brand-title">MalariaLens <span class="brand-badge">AI</span></h1>
+            <p class="brand-subtitle">Clinical Erythrocyte Diagnostic System &bull; Group 12</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="model-stats-pill">
+          <span class="stat-tag"><i data-lucide="check-circle-2"></i> 95.79% Test Acc</span>
+          <span class="stat-tag"><i data-lucide="shield-check"></i> 0.9831 ROC-AUC</span>
+          <span class="stat-tag highlight"><i data-lucide="activity"></i> 95.31% Sensitivity</span>
+        </div>
+        <a href="Malaria_Detection_Report.pdf" target="_blank" class="btn btn-outline btn-sm">
+          <i data-lucide="file-text"></i>
+          <span>Research Report</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <div class="container app-grid">
+      
+      <!-- LEFT PANEL: Image Input & Preset Gallery -->
+      <section class="panel input-panel">
+        <div class="panel-header">
+          <div class="panel-title-wrap">
+            <span class="step-num">01</span>
+            <h2>Micrograph Input</h2>
+          </div>
+          <span class="panel-hint">Giemsa-Stained Smear</span>
+        </div>
+
+        <!-- Drag & Drop Zone -->
+        <div class="dropzone" id="dropzone">
+          <input type="file" id="file-input" accept="image/png, image/jpeg" style="display: none;">
+          <div class="dropzone-content">
+            <div class="upload-icon-wrap"><i data-lucide="upload-cloud"></i></div>
+            <h3>Drop cell image here</h3>
+            <p>or click to browse from device (PNG, JPG)</p>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('file-input').click()">
+              <i data-lucide="folder"></i> Browse Image
+            </button>
+          </div>
+        </div>
+
+        <!-- Sample Cell Selector -->
+        <div class="samples-section">
+          <div class="samples-header">
+            <h3>Or Select a Verified Benchmark Cell:</h3>
+            <span class="samples-sub">Extracted from 8,268 untouched test images</span>
+          </div>
+
+          <div class="sample-cards-grid">
+            <!-- Sample 1 -->
+            <button class="sample-btn" data-type="parasitized" data-src="samples/parasitized_1.png" data-name="Ring Stage Trophozoite">
+              <div class="sample-thumb-wrap">
+                <img src="samples/parasitized_1.png" alt="Parasitized Cell 1">
+              </div>
+              <div class="sample-meta">
+                <span class="sample-label infected">Parasitized #1</span>
+                <span class="sample-desc">Ring stage inclusion</span>
+              </div>
+            </button>
+
+            <!-- Sample 2 -->
+            <button class="sample-btn" data-type="parasitized" data-src="samples/parasitized_2.png" data-name="Active Trophozoite">
+              <div class="sample-thumb-wrap">
+                <img src="samples/parasitized_2.png" alt="Parasitized Cell 2">
+              </div>
+              <div class="sample-meta">
+                <span class="sample-label infected">Parasitized #2</span>
+                <span class="sample-desc">Chromatin dots</span>
+              </div>
+            </button>
+
+            <!-- Sample 3 -->
+            <button class="sample-btn" data-type="parasitized" data-src="samples/parasitized_3.png" data-name="Multiple Chromatin Rings">
+              <div class="sample-thumb-wrap">
+                <img src="samples/parasitized_3.png" alt="Parasitized Cell 3">
+              </div>
+              <div class="sample-meta">
+                <span class="sample-label infected">Parasitized #3</span>
+                <span class="sample-desc">Early schizont</span>
+              </div>
+            </button>
+
+            <!-- Sample 4 -->
+            <button class="sample-btn" data-type="uninfected" data-src="samples/uninfected_1.png" data-name="Healthy Erythrocyte A">
+              <div class="sample-thumb-wrap">
+                <img src="samples/uninfected_1.png" alt="Uninfected Cell 1">
+              </div>
+              <div class="sample-meta">
+                <span class="sample-label healthy">Uninfected #1</span>
+                <span class="sample-desc">Normal biconcave</span>
+              </div>
+            </button>
+
+            <!-- Sample 5 -->
+            <button class="sample-btn" data-type="uninfected" data-src="samples/uninfected_2.png" data-name="Healthy Erythrocyte B">
+              <div class="sample-thumb-wrap">
+                <img src="samples/uninfected_2.png" alt="Uninfected Cell 2">
+              </div>
+              <div class="sample-meta">
+                <span class="sample-label healthy">Uninfected #2</span>
+                <span class="sample-desc">Clear cytoplasm</span>
+              </div>
+            </button>
+
+            <!-- Sample 6 -->
+            <button class="sample-btn" data-type="uninfected" data-src="samples/uninfected_3.png" data-name="Healthy Erythrocyte C">
+              <div class="sample-thumb-wrap">
+                <img src="samples/uninfected_3.png" alt="Uninfected Cell 3">
+              </div>
+              <div class="sample-meta">
+                <span class="sample-label healthy">Uninfected #3</span>
+                <span class="sample-desc">Uniform membrane</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Academic Accreditation Footer -->
+        <div class="project-credit-box">
+          <div class="credit-icon"><i data-lucide="graduation-cap"></i></div>
+          <div class="credit-text">
+            <strong>Deep Learning Course Project &bull; Group 12</strong>
+            <span>Sahaana Shri S. K. &bull; R. Nethra &bull; Amrita Vishwa Vidyapeetham</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT PANEL: Diagnostic HUD, Explainability & Metrics -->
+      <section class="panel results-panel">
+        <div class="panel-header">
+          <div class="panel-title-wrap">
+            <span class="step-num">02</span>
+            <h2>Diagnostic Inference & Saliency</h2>
+          </div>
+          <div class="live-indicator">
+            <span class="live-dot"></span>
+            <span>Real-time Inference</span>
+          </div>
+        </div>
+
+        <!-- Diagnostic Verdict Banner -->
+        <div class="verdict-banner" id="verdict-banner">
+          <div class="verdict-left">
+            <div class="verdict-icon" id="verdict-icon"><i data-lucide="loader-2"></i></div>
+            <div>
+              <div class="verdict-pre">Diagnostic Classification:</div>
+              <h3 class="verdict-title" id="verdict-title">Select or upload a blood cell image</h3>
+              <p class="verdict-desc" id="verdict-desc">Awaiting input micrograph to analyze intracellular inclusion bodies...</p>
+            </div>
+          </div>
+          <div class="verdict-metric" id="verdict-metric">
+            <div class="confidence-val" id="confidence-val">--%</div>
+            <div class="confidence-label">Posterior Confidence</div>
+          </div>
+        </div>
+
+        <!-- Multi-Modal Visual Inspection -->
+        <div class="view-stage-card">
+          <div class="stage-toolbar">
+            <span class="toolbar-title"><i data-lucide="eye"></i> Inspection Mode:</span>
+            <div class="view-toggles">
+              <button class="view-toggle-btn active" data-mode="micrograph">
+                <i data-lucide="image"></i> Micrograph
+              </button>
+              <button class="view-toggle-btn" data-mode="gradcam">
+                <i data-lucide="flame"></i> Grad-CAM
+              </button>
+              <button class="view-toggle-btn" data-mode="lime">
+                <i data-lucide="grid"></i> LIME Superpixels
+              </button>
+              <button class="view-toggle-btn" data-mode="density">
+                <i data-lucide="scan"></i> Density Profile
+              </button>
+            </div>
+          </div>
+
+          <!-- Canvas / Viewport Container -->
+          <div class="viewport-canvas-wrap">
+            <canvas id="display-canvas" width="300" height="300"></canvas>
+            <div class="canvas-overlay-label" id="canvas-overlay-label">Original Microscopy View</div>
+          </div>
+
+          <div class="stage-caption" id="stage-caption">
+            Standard $128\times 128$ rescaled Giemsa stain blood smear showing cellular cytoplasm.
+          </div>
+        </div>
+
+        <!-- Quantitative Morphological Metrics Grid -->
+        <div class="metrics-dashboard">
+          <div class="dash-card">
+            <div class="dash-label"><i data-lucide="disc"></i> Intracellular Inclusions</div>
+            <div class="dash-val" id="inclusions-val">--</div>
+            <div class="dash-sub" id="inclusions-sub">Pathogen ring detection</div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-label"><i data-lucide="sun-medium"></i> Chromatin Staining Density</div>
+            <div class="dash-val" id="density-val">--</div>
+            <div class="dash-sub" id="density-sub">Optical peak absorbance</div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-label"><i data-lucide="layers"></i> Cytoplasmic Uniformity</div>
+            <div class="dash-val" id="uniformity-val">--</div>
+            <div class="dash-sub" id="uniformity-sub">Morphological integrity</div>
+          </div>
+
+          <div class="dash-card highlight">
+            <div class="dash-label"><i data-lucide="stethoscope"></i> Clinical Action</div>
+            <div class="dash-val text-sm" id="action-val">Awaiting cell</div>
+            <div class="dash-sub" id="action-sub">Recommended laboratory next step</div>
+          </div>
+        </div>
+
+        <!-- Methodology & Benchmarks Accordion -->
+        <div class="methodology-card">
+          <div class="methodology-header">
+            <h4><i data-lucide="cpu"></i> Evaluated Model Architecture & Integrity</h4>
+            <span class="badge-subtle">Disjoint 70:30 Partitioning</span>
+          </div>
+          <p class="methodology-text">
+            Trained with <strong>Stratified 3-Fold Cross-Validation</strong> across 27,558 cells with zero data leakage. Evaluated once on 8,268 untouched test images:
+          </p>
+          <div class="benchmark-pills-row">
+            <div class="bench-pill">
+              <strong>95.79%</strong>
+              <span>Overall Accuracy</span>
+            </div>
+            <div class="bench-pill">
+              <strong>95.31%</strong>
+              <span>Infected Sensitivity</span>
+            </div>
+            <div class="bench-pill">
+              <strong>96.24%</strong>
+              <span>Infected Precision</span>
+            </div>
+            <div class="bench-pill">
+              <strong>0.9831</strong>
+              <span>Test ROC-AUC</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Group 12 &bull; Amrita Vishwa Vidyapeetham. Malaria Diagnostic CNN with Explainability.</p>
+      <div class="footer-actions">
+        <a href="../#projects">View All Projects</a>
+        <a href="Malaria_Detection_Report.pdf" target="_blank">Download Paper PDF</a>
+        <a href="https://github.com/Nethra-R368/portfolio" target="_blank">GitHub Source</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
