@@ -357,11 +357,80 @@ body.light-theme .moon-icon { display: block; }
   position: relative;
 }
 
-.hero-container {
+.hero-main-row {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.hero-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+}
+
+/* Portrait Card */
+.hero-portrait-col {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-portrait-card {
+  width: 100%;
+  max-width: 320px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.hero-portrait-card:hover {
+  border-color: var(--border-color-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.portrait-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.portrait-info {
+  padding-top: 0.85rem;
+  text-align: center;
+}
+
+.portrait-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.portrait-sub {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--accent-primary);
 }
 
 .status-badge {
@@ -1271,6 +1340,9 @@ body.light-theme .moon-icon { display: block; }
 
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
+  .hero-main-row { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-portrait-col { order: -1; }
+  .hero-portrait-card { max-width: 260px; }
   .hero-title { font-size: 2.6rem; }
   .metrics-grid { grid-template-columns: repeat(2, 1fr); }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
