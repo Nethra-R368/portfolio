@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nethra Rajendran | AI Engineer & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Nethra Rajendran — B.Tech Computer Science (AI) student at Amrita Vishwa Vidyapeetham, IEEE Published Researcher, and Software Engineering Intern.">
+  <meta name="keywords" content="Nethra Rajendran, AI Engineer, Computer Vision, FastAPI, Full Stack, Software Engineer, Portfolio, IEEE Research">
+  <meta name="author" content="Nethra Rajendran">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Nethra Rajendran | AI Engineer & Full-Stack Developer">
+  <meta property="og:description" content="Published IEEE Researcher in Computer Vision, Software Engineering Intern, and AI builder.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Ambient background glow elements -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-accent">&lt;</span>NR<span class="logo-accent">/&gt;</span>
+        <span class="logo-name">Nethra Rajendran</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Honors</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="resume.pdf" target="_blank" class="btn btn-outline btn-sm resume-btn">
+          <i data-lucide="file-text"></i>
+          <span>Resume</span>
+        </a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="status-badge">
+          <span class="status-pulse"></span>
+          <span>Open to SDE & AI Internship / Full-Time Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Engineering Intelligent Systems with <span class="gradient-text">Computer Vision</span>, <span class="gradient-text-alt">ML Pipelines</span> & Scalable Backends.
+        </h1>
+
+        <p class="hero-bio">
+          I'm <strong>Nethra Rajendran</strong>, an AI & Software Engineering student at Amrita Vishwa Vidyapeetham (CGPA 8.4) and published <strong>IEEE author</strong>. I architect resilient microservices with FastAPI, design real-time Computer Vision pipelines, and turn state-of-the-art models into production software.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Work</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <a href="#publications" class="btn btn-secondary">
+            <i data-lucide="book-open"></i>
+            <span>IEEE Research</span>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <i data-lucide="mail"></i>
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Social Quick Links -->
+        <div class="hero-socials">
+          <a href="https://github.com/Nethra-R368" target="_blank" rel="noopener noreferrer" class="social-chip" title="GitHub Profile">
+            <i data-lucide="github"></i>
+            <span>github.com/Nethra-R368</span>
+          </a>
+          <a href="https://linkedin.com/in/nethra-rajendran-83036330a" target="_blank" rel="noopener noreferrer" class="social-chip" title="LinkedIn Profile">
+            <i data-lucide="linkedin"></i>
+            <span>linkedin.com/in/nethra-rajendran</span>
+          </a>
+          <a href="mailto:nethrar368@gmail.com" class="social-chip" title="Email Nethra">
+            <i data-lucide="send"></i>
+            <span>nethrar368@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Key Metrics Cards -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-num">2</div>
+            <div class="metric-label">IEEE Published Papers</div>
+            <div class="metric-sub">ICISC & STPEC 2025</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">8.4</div>
+            <div class="metric-label">B.Tech CGPA</div>
+            <div class="metric-sub">Amrita Vishwa Vidyapeetham</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">5+</div>
+            <div class="metric-label">Hackathon Accolades</div>
+            <div class="metric-sub">SIH, MobilityX, Fiesta, Cosmo</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">4+</div>
+            <div class="metric-label">FastAPI Microservices</div>
+            <div class="metric-sub">Hybrid Qdrant & SSE Stream</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Background</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Bridging mathematical rigor in machine learning with modern distributed software engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-col">
+            <p class="lead-text">
+              I am a Computer Science (Artificial Intelligence) undergraduate (Class of 2028) based in Coimbatore, India. My passion lies in building systems that solve tangible problems — from tracking remote optical communication terminals for space research to evaluating road safety through intelligent edge vision.
+            </p>
+            <p>
+              During my internships at <strong>IT Trident</strong> and <strong>NX Web</strong>, I worked on end-to-end service contracts: crafting asynchronous FastAPI microservices, implementing hybrid vector retrieval pipelines on Qdrant, optimizing PostgreSQL queries, and delivering interactive Next.js interfaces with Server-Sent Events.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i data-lucide="cpu"></i></div>
+                <div>
+                  <h4>AI & Computer Vision</h4>
+                  <p>YOLOv8, custom CNN architectures, OpenCV, LaneNet, PyTorch, and hybrid retrieval with Qdrant.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i data-lucide="server"></i></div>
+                <div>
+                  <h4>Modern Backend Engineering</h4>
+                  <p>FastAPI, Flask, AsyncIO, SSE streaming, Docker containerization, REST API contracts, and schema indexing.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon"><i data-lucide="award"></i></div>
+                <div>
+                  <h4>Research & Competition</h4>
+                  <p>2 peer-reviewed IEEE papers, Smart India Hackathon Team Lead, and top-tier finishes in 24hr buildathons.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card-col">
+            <div class="education-card">
+              <div class="card-badge"><i data-lucide="graduation-cap"></i> Education</div>
+              <h3>Amrita Vishwa Vidyapeetham</h3>
+              <p class="edu-degree">B.Tech in Computer Science (Artificial Intelligence)</p>
+              <div class="edu-meta">
+                <span><i data-lucide="map-pin"></i> Coimbatore, India</span>
+                <span><i data-lucide="calendar"></i> 2024 — 2028</span>
+              </div>
+              <div class="cgpa-pill">
+                <span>Cumulative GPA:</span>
+                <strong>8.4 / 10.0</strong>
+              </div>
+              <div class="edu-coursework">
+                <span class="course-tag">Data Structures & Algorithms</span>
+                <span class="course-tag">Machine Learning</span>
+                <span class="course-tag">Operating Systems</span>
+                <span class="course-tag">Database Management</span>
+                <span class="course-tag">Computer Networks</span>
+              </div>
+            </div>
+
+            <div class="contact-quick-box">
+              <h4>Direct Contact</h4>
+              <ul class="quick-contact-list">
+                <li><i data-lucide="mail"></i> <a href="mailto:nethrar368@gmail.com">nethrar368@gmail.com</a></li>
+                <li><i data-lucide="phone"></i> <a href="tel:+916369415438">+91 6369415438</a></li>
+                <li><i data-lucide="map-pin"></i> Coimbatore, Tamil Nadu, India</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Technical Expertise</h2>
+          <p class="section-subtitle">A balanced toolset across artificial intelligence research, backend systems, and frontend interfaces.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1: AI & ML -->
+          <div class="skill-group-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap"><i data-lucide="brain"></i></div>
+              <h3>AI & Machine Learning</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">YOLO (v8)</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">Computer Vision</span>
+              <span class="skill-tag">scikit-learn</span>
+              <span class="skill-tag">XGBoost</span>
+              <span class="skill-tag">LightGBM</span>
+              <span class="skill-tag">LaneNet</span>
+              <span class="skill-tag">CNNs</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Backend & Microservices -->
+          <div class="skill-group-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap"><i data-lucide="layers"></i></div>
+              <h3>Backend & Microservices</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Flask</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">AsyncIO</span>
+              <span class="skill-tag">Server-Sent Events (SSE)</span>
+              <span class="skill-tag">Request Tracing</span>
+              <span class="skill-tag">Batch Processing</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Programming Languages -->
+          <div class="skill-group-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap"><i data-lucide="code-2"></i></div>
+              <h3>Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Databases & Vector Stores -->
+          <div class="skill-group-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap"><i data-lucide="database"></i></div>
+              <h3>Databases & Vector Storage</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Qdrant Vector DB</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Hybrid Retrieval (RRF)</span>
+              <span class="skill-tag">Schema Design</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Frontend & Web -->
+          <div class="skill-group-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap"><i data-lucide="layout"></i></div>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">HTML5 / CSS3</span>
+              <span class="skill-tag">Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Tools & Core CS -->
+          <div class="skill-group-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap"><i data-lucide="terminal"></i></div>
+              <h3>DevOps & Core CS</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">DSA</span>
+              <span class="skill-tag">DBMS</span>
+              <span class="skill-tag">OS</span>
+              <span class="skill-tag">Networks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">Real-world engineering delivering microservices, streaming pipelines, and production web services.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3 class="role-title">Software Engineering Intern</h3>
+                  <div class="company-name">IT Trident</div>
+                </div>
+                <div class="timeline-badge">May 2026 — June 2026</div>
+              </div>
+
+              <ul class="timeline-bullets">
+                <li>
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Architected and deployed <strong>4 FastAPI microservices</strong> exposing structured REST API contracts consumed by a modern TypeScript & Next.js client.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Implemented an asynchronous <strong>hybrid retrieval pipeline</strong> combining dense and sparse embeddings with Reciprocal Rank Fusion (RRF) and CrossEncoder on <strong>Qdrant vector database</strong>.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Engineered <strong>Server-Sent Events (SSE) streaming</strong> and asynchronous request batching to process heavy analytical workflows without blocking UI execution.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Implemented structured logging, request tracing, and rigorous input validation to isolate cross-service failures; actively participated in PR code reviews and engineering discussions.</span>
+                </li>
+              </ul>
+
+              <div class="timeline-stack">
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">Qdrant Vector DB</span>
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">SSE Streaming</span>
+                <span class="tech-pill">AsyncIO</span>
+                <span class="tech-pill">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3 class="role-title">Web Development Intern</h3>
+                  <div class="company-name">NX Web</div>
+                </div>
+                <div class="timeline-badge">Summer 2025</div>
+              </div>
+
+              <ul class="timeline-bullets">
+                <li>
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Developed modular <strong>Flask backend services</strong> integrated with responsive frontend components, managing data flow across UI, API, and database layers.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Encapsulated <strong>machine learning inference workflows</strong> behind clean REST service interfaces to guarantee stable, predictable client-facing response times.</span>
+                </li>
+                <li>
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Investigated and resolved database query bottlenecks, debugged issues across production codebases, and collaborated efficiently in an <strong>Agile workflow</strong> using Git/GitHub.</span>
+                </li>
+              </ul>
+
+              <div class="timeline-stack">
+                <span class="tech-pill">Flask</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">ML Inference</span>
+                <span class="tech-pill">SQL Optimization</span>
+                <span class="tech-pill">Git / Agile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & PUBLICATIONS SECTION -->
+    <section class="section publications-section" id="publications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Peer-Reviewed Research</span>
+          <h2 class="section-title">IEEE Publications</h2>
+          <p class="section-subtitle">Published contributions in applied computer vision and predictive maintenance systems.</p>
+        </div>
+
+        <div class="pubs-grid">
+          <!-- Paper 1 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-conference-badge">IEEE ICISC 2025</span>
+              <span class="pub-doi-pill">DOI: 10.1109/ICISC65841.2025.11187533</span>
+            </div>
+            
+            <h3 class="pub-title">Integrated License Plate Recognition Using YOLO and CNN for Automated Vehicle Identification</h3>
+            
+            <p class="pub-authors">
+              <strong>Nethra Rajendran</strong>, et al. &bull; <em>IEEE 2025 International Conference on Inventive Systems and Control (ICISC)</em>
+            </p>
+
+            <p class="pub-abstract">
+              Developed an end-to-end license-plate recognition pipeline coupling YOLOv8 real-time object detection with a custom CNN-based character recognition module. Evaluated against baseline YOLOv8 + OCR models across diverse vehicle datasets, demonstrating improved character accuracy and resilience to lighting/angle variations.
+            </p>
+
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1109/ICISC65841.2025.11187533" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <i data-lucide="external-link"></i>
+                <span>View on IEEE Xplore</span>
+              </a>
+              <button class="btn btn-secondary btn-sm copy-cite-btn" data-cite="Rajendran, N. et al. (2025). Integrated License Plate Recognition Using YOLO and CNN for Automated Vehicle Identification. IEEE ICISC 2025. DOI: 10.1109/ICISC65841.2025.11187533">
+                <i data-lucide="copy"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Paper 2 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-conference-badge">IEEE STPEC 2025</span>
+              <span class="pub-doi-pill">DOI: 10.1109/STPEC66316.2025.11490377</span>
+            </div>
+            
+            <h3 class="pub-title">ANN-Based Predictive Maintenance for Mini Grid Black Out Prevention</h3>
+            
+            <p class="pub-authors">
+              <strong>Nethra Rajendran</strong>, et al. &bull; <em>IEEE 2025 Smart Technologies for Power and Energy Conference (STPEC)</em>
+            </p>
+
+            <p class="pub-abstract">
+              Engineered an artificial neural network predictive maintenance architecture analyzing real-time operational sensor telemetry to forecast blackout risks and equipment anomalies in decentralized mini-grids, enabling proactive load rebalancing and fault prevention.
+            </p>
+
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1109/STPEC66316.2025.11490377" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <i data-lucide="external-link"></i>
+                <span>View on IEEE Xplore</span>
+              </a>
+              <button class="btn btn-secondary btn-sm copy-cite-btn" data-cite="Rajendran, N. et al. (2025). ANN-Based Predictive Maintenance for Mini Grid Black Out Prevention. IEEE STPEC 2025. DOI: 10.1109/STPEC66316.2025.11490377">
+                <i data-lucide="copy"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-subtitle">Real-world prototypes spanning edge vision, robotics tracking, and full-stack platforms.</p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="cv">Computer Vision & AI</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack & Systems</button>
+          <button class="filter-btn" data-filter="hackathon">Hackathon Finalists</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: DRISHTI-PAT -->
+          <div class="project-card" data-category="cv hackathon">
+            <div class="project-badge-top">ISRO/SAC Problem &bull; SIH 2026</div>
+            <h3 class="project-title">DRISHTI-PAT: AI FSOC Terminal Tracking</h3>
+            <p class="project-desc">
+              AI-assisted vision pipeline for detecting and tracking remote Free Space Optical Communication (FSOC) terminals and estimating angular alignment error for coarse pointing.
+            </p>
+            <ul class="project-points">
+              <li>Designed closed-loop pipeline: target detection &rarr; tracking &rarr; angular-error estimation &rarr; terminal gimbal control.</li>
+              <li>Built simulation prototype to evaluate robustness under dynamic platform vibration and optical beacon occlusion.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>YOLO</span>
+              <span>OpenCV</span>
+              <span>ROS2</span>
+              <span>Gazebo</span>
+              <span>Control Systems</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/Nethra-R368" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i data-lucide="github"></i> Repository
+              </a>
+              <span class="proj-meta">Space Optical Comm</span>
+            </div>
+          </div>
+
+          <!-- Project 2: RoadVision AI -->
+          <div class="project-card" data-category="cv fullstack hackathon">
+            <div class="project-badge-top">National Finalist &bull; MobilityX 2.0</div>
+            <h3 class="project-title">RoadVision AI: Infrastructure Assessment</h3>
+            <p class="project-desc">
+              Comprehensive computer vision platform uniting pothole detection, road encroachment identification, and lane boundary analysis to compute a real-time Road Quality Score.
+            </p>
+            <ul class="project-points">
+              <li>Integrated GIS-based interactive spatial map for municipal prioritization workflows.</li>
+              <li>Selected as National Finalist in a 24-hour sprint among 150+ competing teams across India.</li>
+            </ul>
+            <div class="project-tags">
+              <span>YOLOv8</span>
+              <span>LaneNet</span>
+              <span>Computer Vision</span>
+              <span>GIS Mapping</span>
+              <span>React</span>
+              <span>FastAPI</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/Nethra-R368" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i data-lucide="github"></i> Repository
+              </a>
+              <span class="proj-meta">Civic Tech / Smart Cities</span>
+            </div>
+          </div>
+
+          <!-- Project 3: Integrated License Plate Recognition -->
+          <div class="project-card" data-category="cv">
+            <div class="project-badge-top">Published &bull; IEEE ICISC 2025</div>
+            <h3 class="project-title">Integrated License Plate Recognition</h3>
+            <p class="project-desc">
+              End-to-end intelligent vehicle identification integrating YOLOv8 localization with a custom deep convolutional neural network for high-accuracy character recognition.
+            </p>
+            <ul class="project-points">
+              <li>Evaluated against baseline YOLOv8 + EasyOCR models, demonstrating notable improvements in noisy conditions.</li>
+              <li>Published in IEEE International Conference on Inventive Systems and Control (ICISC 2025).</li>
+            </ul>
+            <div class="project-tags">
+              <span>PyTorch</span>
+              <span>YOLOv8</span>
+              <span>Custom CNN</span>
+              <span>EasyOCR</span>
+              <span>OpenCV</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://doi.org/10.1109/ICISC65841.2025.11187533" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i data-lucide="book-open"></i> IEEE Paper
+              </a>
+              <span class="proj-meta">Applied Deep Learning</span>
+            </div>
+          </div>
+
+          <!-- Project 4: EduCred -->
+          <div class="project-card" data-category="fullstack hackathon">
+            <div class="project-badge-top">Bounty Winner &bull; COSMOHACK 1.0</div>
+            <h3 class="project-title">EduCred: Web3 Credential Verification</h3>
+            <p class="project-desc">
+              Decentralized academic credential issuance and cryptographic verification engine designed for universities and employers to eliminate diploma fraud.
+            </p>
+            <ul class="project-points">
+              <li>Awarded $25 sponsor bounty in the Aptos / Web3 track for architecture elegance and UX.</li>
+              <li>Engineered smart contract interactions paired with an intuitive verification dashboard.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Aptos</span>
+              <span>Web3</span>
+              <span>TypeScript</span>
+              <span>React</span>
+              <span>Cryptography</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/Nethra-R368" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i data-lucide="github"></i> Repository
+              </a>
+              <span class="proj-meta">Blockchain & Security</span>
+            </div>
+          </div>
+
+          <!-- Project 5: AI Waterborne Disease Surveillance -->
+          <div class="project-card" data-category="cv fullstack hackathon">
+            <div class="project-badge-top">Top 5 Finish &bull; Fiesta Hackathon 2026</div>
+            <h3 class="project-title">Waterborne Disease Early Warning AI</h3>
+            <p class="project-desc">
+              AI-driven surveillance platform analyzing water sensor anomalies and community epidemiology signals to generate proactive outbreak advisories.
+            </p>
+            <ul class="project-points">
+              <li>Ranked in Top 5 teams out of 150+ competitors nationwide.</li>
+              <li>Incorporated predictive analytics and automated alert dispatch pipelines.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Machine Learning</span>
+              <span>FastAPI</span>
+              <span>Time-Series</span>
+              <span>React</span>
+              <span>Analytics</span>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/Nethra-R368" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i data-lucide="github"></i> Repository
+              </a>
+              <span class="proj-meta">Healthcare AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & LEADERSHIP -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Recognition</span>
+          <h2 class="section-title">Achievements & Leadership</h2>
+          <p class="section-subtitle">Consistent track record of competitive problem-solving and team leadership.</p>
+        </div>
+
+        <div class="awards-grid">
+          <div class="award-card">
+            <div class="award-icon"><i data-lucide="flag"></i></div>
+            <div class="award-info">
+              <h3>Smart India Hackathon 2025 &bull; Team Lead</h3>
+              <p>Led a national-level SIH engineering team; spearheaded the architectural design, algorithmic pipeline, and full-stack deployment.</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon"><i data-lucide="target"></i></div>
+            <div class="award-info">
+              <h3>Smart India Hackathon (SIH 2026) &bull; Core Developer</h3>
+              <p>Selected team member & core vision engineer for DRISHTI-PAT (tackling the ISRO/SAC challenge on free-space optical terminal tracking).</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon"><i data-lucide="trophy"></i></div>
+            <div class="award-info">
+              <h3>MobilityX 2.0 &bull; National Finalist</h3>
+              <p>Ranked in the final round of a grueling 24-hour hackathon among 150+ teams across the country for the RoadVision AI platform.</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon"><i data-lucide="medal"></i></div>
+            <div class="award-info">
+              <h3>Fiesta Hackathon 2026 &bull; Top 5 Finalist</h3>
+              <p>Earned a top-5 placement out of 150+ teams for architecting an AI-driven early-warning waterborne disease surveillance system.</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon"><i data-lucide="gift"></i></div>
+            <div class="award-info">
+              <h3>COSMOHACK 1.0 &bull; Bounty Award Winner</h3>
+              <p>Awarded sponsor bounty in the Aptos/Web3 track for building the EduCred tamper-proof credential verification system.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in collaborating on AI research, hiring for SDE/AI internships, or discussing novel ideas? Reach out directly!</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info-panel">
+            <h3>Contact Information</h3>
+            <p>I am always excited to discuss engineering roles, research opportunities, or open-source projects.</p>
+            
+            <div class="contact-details">
+              <a href="mailto:nethrar368@gmail.com" class="contact-item">
+                <div class="contact-icon"><i data-lucide="mail"></i></div>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-val">nethrar368@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="tel:+916369415438" class="contact-item">
+                <div class="contact-icon"><i data-lucide="phone"></i></div>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  <div class="contact-val">+91 6369415438</div>
+                </div>
+              </a>
+
+              <a href="https://linkedin.com/in/nethra-rajendran-83036330a" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-icon"><i data-lucide="linkedin"></i></div>
+                <div>
+                  <div class="contact-label">LinkedIn</div>
+                  <div class="contact-val">linkedin.com/in/nethra-rajendran</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/Nethra-R368" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-icon"><i data-lucide="github"></i></div>
+                <div>
+                  <div class="contact-label">GitHub</div>
+                  <div class="contact-val">github.com/Nethra-R368</div>
+                </div>
+              </a>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                <div>
+                  <div class="contact-label">Location</div>
+                  <div class="contact-val">Coimbatore, Tamil Nadu, India</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Sundar Pichai" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="sundar@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Role Inquiry / Research Collaboration" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Hi Nethra, I came across your IEEE research and projects..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i data-lucide="send"></i>
+                <span>Send Message</span>
+              </button>
+              <div id="form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <span class="logo-accent">&lt;</span>NR<span class="logo-accent">/&gt;</span> Nethra Rajendran
+        </div>
+        <p class="footer-copy">&copy; 2026 Nethra Rajendran. Built with clean code & modern aesthetics.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Back to top</a>
+        <a href="resume.pdf" target="_blank">Download Resume</a>
+        <a href="https://github.com/Nethra-R368" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/nethra-rajendran-83036330a" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
