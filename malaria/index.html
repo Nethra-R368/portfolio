@@ -14,7 +14,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261017_2">
 </head>
 <body class="dark-theme">
 
@@ -62,20 +62,20 @@
           <span class="panel-hint">Giemsa-Stained Smear</span>
         </div>
 
-        <!-- Drag & Drop Zone -->
-        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Drop or click to upload micrograph">
-          <input type="file" id="file-input" accept="image/*" style="display: none;">
+        <!-- Native, 100% Guaranteed Drag & Drop / Click Zone -->
+        <label for="file-input" class="dropzone" id="dropzone">
+          <input type="file" id="file-input" accept="image/*">
           <div class="dropzone-default" id="dropzone-default">
             <div class="upload-icon-wrap"><i data-lucide="upload-cloud"></i></div>
             <h3>Drop blood cell image here</h3>
             <p>or click anywhere to browse from device</p>
             <div class="dropzone-hints">
-              <span class="hint-pill"><i data-lucide="image"></i> PNG, JPG, WEBP, BMP</span>
+              <span class="hint-pill"><i data-lucide="image"></i> All Image Formats</span>
               <span class="hint-pill"><i data-lucide="clipboard"></i> Paste (Ctrl+V)</span>
             </div>
-            <button type="button" class="btn btn-secondary btn-sm" id="browse-btn">
+            <span class="btn btn-secondary btn-sm browse-btn-visual">
               <i data-lucide="folder"></i> Browse Image
-            </button>
+            </span>
           </div>
           <div class="dropzone-loaded" id="dropzone-loaded" style="display: none;">
             <div class="loaded-thumb-wrap">
@@ -86,11 +86,11 @@
               <span class="loaded-meta" id="loaded-filesize">Loaded & Analyzed</span>
               <span class="loaded-badge"><i data-lucide="check"></i> Micrograph Active</span>
             </div>
-            <button type="button" class="btn btn-outline btn-sm loaded-replace-btn" id="replace-img-btn" title="Replace image">
+            <span class="btn btn-outline btn-sm loaded-replace-btn">
               <i data-lucide="refresh-cw"></i> Replace
-            </button>
+            </span>
           </div>
-        </div>
+        </label>
 
         <!-- Sample Cell Selector -->
         <div class="samples-section">
@@ -320,6 +320,6 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=20261017_2"></script>
 </body>
 </html>

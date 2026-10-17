@@ -339,6 +339,29 @@ body {
   margin-bottom: 1.75rem;
   outline: none;
   position: relative;
+  display: block;
+  user-select: none;
+}
+
+/* Native input overlays whole dropzone transparently so ANY click or drop triggers it natively */
+.dropzone input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+}
+
+.dropzone-default,
+.dropzone-loaded {
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
 }
 
 .dropzone:hover, .dropzone:focus-visible, .dropzone.dragover {
