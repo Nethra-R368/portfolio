@@ -63,14 +63,31 @@
         </div>
 
         <!-- Drag & Drop Zone -->
-        <div class="dropzone" id="dropzone">
-          <input type="file" id="file-input" accept="image/png, image/jpeg" style="display: none;">
-          <div class="dropzone-content">
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Drop or click to upload micrograph">
+          <input type="file" id="file-input" accept="image/*" style="display: none;">
+          <div class="dropzone-default" id="dropzone-default">
             <div class="upload-icon-wrap"><i data-lucide="upload-cloud"></i></div>
-            <h3>Drop cell image here</h3>
-            <p>or click to browse from device (PNG, JPG)</p>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('file-input').click()">
+            <h3>Drop blood cell image here</h3>
+            <p>or click anywhere to browse from device</p>
+            <div class="dropzone-hints">
+              <span class="hint-pill"><i data-lucide="image"></i> PNG, JPG, WEBP, BMP</span>
+              <span class="hint-pill"><i data-lucide="clipboard"></i> Paste (Ctrl+V)</span>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" id="browse-btn">
               <i data-lucide="folder"></i> Browse Image
+            </button>
+          </div>
+          <div class="dropzone-loaded" id="dropzone-loaded" style="display: none;">
+            <div class="loaded-thumb-wrap">
+              <img id="loaded-thumb" src="" alt="Uploaded Cell Preview">
+            </div>
+            <div class="loaded-info">
+              <span class="loaded-title" id="loaded-filename">Custom Micrograph</span>
+              <span class="loaded-meta" id="loaded-filesize">Loaded & Analyzed</span>
+              <span class="loaded-badge"><i data-lucide="check"></i> Micrograph Active</span>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm loaded-replace-btn" id="replace-img-btn" title="Replace image">
+              <i data-lucide="refresh-cw"></i> Replace
             </button>
           </div>
         </div>
@@ -214,6 +231,16 @@
           <div class="viewport-canvas-wrap">
             <canvas id="display-canvas" width="300" height="300"></canvas>
             <div class="canvas-overlay-label" id="canvas-overlay-label">Original Microscopy View</div>
+
+            <!-- Animated Diagnostic Laser Scanner Overlay -->
+            <div class="scanning-overlay" id="scanning-overlay" style="display: none;">
+              <div class="scanner-laser"></div>
+              <div class="scanner-hud">
+                <div class="scanner-spinner"></div>
+                <div class="scanner-status" id="scanner-status">Analyzing Micrograph...</div>
+                <div class="scanner-subtext" id="scanner-subtext">Isolating Giemsa stained chromatin inclusions</div>
+              </div>
+            </div>
           </div>
 
           <div class="stage-caption" id="stage-caption">
